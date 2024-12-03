@@ -1,0 +1,173 @@
+body {
+    margin: 0; /* Убираем стандартные отступы */
+    height: 100vh; /* Устанавливаем высоту в 100% окна */
+    display: flex; /* Включаем флекс-контейнер */
+    justify-content: center; /* Центрируем блок горизонтально */
+    align-items: center; /* Центрируем блок вертикально */
+    background-image: url('snowman_helmet.jpg'); /* Замените на путь к вашему изображению */
+    
+    background-size: cover; /* Масштабируем изображение под размер экрана */
+    background-position: center; /* Центруем изображение */
+    background-repeat: no-repeat; /* Избегаем повторения фонового изображения */
+	  animation: gradientAnimation 6s infinite alternate;
+	  
+}
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.vh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(204, 204, 204, 0.8); /* Полупрозрачный фон блока */
+    background-size: cover; /* Чтобы картинка занимала весь фон */
+    background-position: center; /* Центровка изображения */
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+	animation: glowing 1.5s infinite alternate;
+	border: 5px solid transparent;
+	
+}
+@keyframes glowing {
+            0% {
+                border-color: #ff0000; /* Красный цвет */
+            }
+            25% {
+                border-color: #00ff00; /* Зеленый */
+            }
+            50% {
+                border-color: #0000ff; /* Синий */
+            }
+            75% {
+                border-color: #ffff00; /* Желтый */
+            }
+            100% {
+                border-color: #ff00ff; /* Розовый */
+            }
+        }
+
+h1 {
+    display: block;
+   
+    font-size: 24px;
+    font-family: 'Comic Sans MS', sans-serif;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #ff007f, #00ffbf, #007fff);
+    -webkit-background-clip: text; /* Для градиента текста */
+    -webkit-text-fill-color: transparent; /* Убирает заполнение */
+
+
+    text-align: center;
+}
+
+.img {
+    text-align: center;
+}
+.contact-block {
+	position:absolute;
+    background: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон */
+    border: 5px solid #007fff; /* Голубая рамка */
+    border-radius: 20px; /* Закругленные углы */
+    padding: 20px 30px;
+    width: 50%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Тень для красоты */
+    
+	margin-top:650px;
+	display:flex;
+	flex-direction:column;
+	background-image:url("OIP.jpg");
+	justify-content:center;
+	height: 18%;
+	background-size:cover
+}
+.contact-block h1 {
+    margin-bottom: 20px;
+    color: #ff007f;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px #fff;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #ff007f; }
+    50% { box-shadow: 0 0 20px #ff007f; }
+    100% { box-shadow: 0 0 5px #ff007f; }
+}
+
+.contact-block a {
+    display: block;
+    margin: 10px 0;
+    color: #fff; /* Белый текст */
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #007fff, #ff007f); /* Градиент */
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: glow 1.5s infinite; /* Анимация сияния */
+    transition: transform 0.3s;
+}
+
+.contact-block a:hover {
+    transform: scale(1.1);
+}
+
+
+.contact-info {
+display:flex;
+flex-direction:column;
+
+    font-size: 10px;
+    color: #333;
+}
+/* Гирлянда */
+.garland {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.light {
+    position: absolute;
+    width: 40px; /* Размер снежинки */
+    height: 40px;
+    background-image: url('Blue_Snowflake_PNG_Transparent_Clipart.png'); /* Путь к изображению снежинки */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: blink 2s infinite alternate;
+    opacity: 0.8; /* Легкая прозрачность */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+@keyframes colorChange {
+    0% { filter: hue-rotate(0deg); }
+    25% { filter: hue-rotate(90deg); }
+    50% { filter: hue-rotate(180deg); }
+    75% { filter: hue-rotate(270deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.light:nth-child(odd) {
+    animation: blink 1.5s infinite alternate, colorChange 5s infinite;
+}
+
+.light:nth-child(even) {
+    animation: blink 2.5s infinite alternate, colorChange 6s infinite;
+}

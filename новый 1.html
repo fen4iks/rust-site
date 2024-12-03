@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Читеры спешат на помощь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="vh">
+        <img src="dbq6mfn3sew51.jpg" width="300" height="200" alt="Описание картинки">
+        <br>
+        <h1>[W-T-F]</h1>
+    </div>
+
+    <div class="contact-block">
+        <div class="contact-info">
+            <a href="https://www.instagram.com/spiderman/" target="_blank">Instagram</a>
+            <a href="https://discord.gg/FARjpYTC" target="_blank">Discord</a>
+            <a href="https://t.me/samura4iks" target="_blank">Telegram</a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const vhBlock = document.querySelector('.vh');
+            const garland = document.createElement('div');
+            garland.className = 'garland';
+
+            for (let i = 0; i < 60; i++) { // количество огоньков
+                const light = document.createElement('div');
+                light.className = 'light';
+                light.style.top = `${Math.random() * 100}%`;
+                light.style.left = `${Math.random() * 100}%`;
+                garland.appendChild(light);
+            }
+
+            vhBlock.appendChild(garland);
+        });
+    </script>
+</body>
+</html>
